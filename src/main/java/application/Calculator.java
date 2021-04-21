@@ -60,5 +60,9 @@ public class Calculator {
 	public double UAusPUndI(double p, double i){
 		return p/i;
 	}
+
+	public double UAusPUndR(double p, double r){
+		return Math.sqrt(p*r);
+	}
 	
 }

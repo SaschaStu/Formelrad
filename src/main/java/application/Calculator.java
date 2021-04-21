@@ -82,4 +82,8 @@ public class Calculator {
 		return p/Math.pow(i,2);
 	}
 
+	public double RAusUUndI(double u, double i){
+		return u/i;
+	}
+
 }

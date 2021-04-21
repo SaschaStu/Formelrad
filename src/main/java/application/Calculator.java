@@ -57,7 +57,7 @@ public class Calculator {
 	public double pAusRundI(double r, double i) {
 		return r*i*i;
 	}
-	/* Hier die Methoden mit den Formlen hinzuf�gen
+	/* Hier die Methoden mit den Formlen hinzuf�gen
 	 */
 
 	//Alle Methoden zur Berechnung der Spannung U aus zwei bekannten Grössen
@@ -81,6 +81,19 @@ public class Calculator {
 	}
 	public double iAusUundR(double u, double r) {
 		return u/r;
+	}
+
+	//Alle Methoden zur Berechnung des Widerstandes R aus zwei bekannten Grössen
+	public double RAusUUndP(double u, double p){
+		return Math.pow(u,2)/p;
+	}
+
+	public double RAusPUndI(double p, double i){
+		return p/Math.pow(i,2);
+	}
+
+	public double RAusUUndI(double u, double i){
+		return u/i;
 	}
 
 }

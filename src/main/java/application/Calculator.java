@@ -48,8 +48,16 @@ public class Calculator {
 		 * welche Methode unten aufgerufen werden muss.
 		 */
 	}
-	
-	/* Hier die Methoden mit den Formlen hinzufï¿½gen
+	public double pAusUundI(double u, double i) {
+		return u*i;
+	}
+	public double pAusUundR(double u, double r) {
+		return u*u/r;
+	}
+	public double pAusRundI(double r, double i) {
+		return r*i*i;
+	}
+	/* Hier die Methoden mit den Formlen hinzufügen
 	 */
 
 	//Alle Methoden zur Berechnung der Spannung U aus zwei bekannten GrÃ¶ssen
@@ -64,5 +72,5 @@ public class Calculator {
 	public double UAusPUndR(double p, double r){
 		return Math.sqrt(p*r);
 	}
-	
+
 }

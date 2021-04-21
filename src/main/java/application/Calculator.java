@@ -56,5 +56,9 @@ public class Calculator {
 	public double UAusRUndI(double r, double i){
 		return r*i;
 	}
+
+	public double UAusPUndI(double p, double i){
+		return p/i;
+	}
 	
 }

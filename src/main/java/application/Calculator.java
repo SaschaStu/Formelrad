@@ -48,7 +48,9 @@ public class Calculator {
 		 * welche Methode unten aufgerufen werden muss.
 		 */
 	}
-	
+	public double pAusUundI(double u, double i) {
+		return u*i;
+	}
 	/* Hier die Methoden mit den Formlen hinzufügen
 	 */
 	

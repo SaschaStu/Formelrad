@@ -73,6 +73,16 @@ public class Calculator {
 		return Math.sqrt(p*r);
 	}
 
+	public double iAusPundR(double p, double r) {
+		return Math.sqrt(p/r);
+	}
+	public double iAusPundU(double p, double u) {
+		return p/u;
+	}
+	public double iAusUundR(double u, double r) {
+		return u/r;
+	}
+
 	//Alle Methoden zur Berechnung des Widerstandes R aus zwei bekannten Grössen
 	public double RAusUUndP(double u, double p){
 		return Math.pow(u,2)/p;

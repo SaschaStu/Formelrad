@@ -4,6 +4,7 @@
 #Intellij dir&files
 .idea/
 target/
+*.iml
 
 #Graph.txt ignore
 graph.txt

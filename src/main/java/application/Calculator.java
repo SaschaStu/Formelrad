@@ -6,47 +6,90 @@ package application;
  * @version 13.09.2018
  */
 public class Calculator {
-	private double leistung;
-	private double spannung;
-	private double strom;
-	private double widerstand;
+	private double p;
+	private double u;
+	private double i;
+	private double r;
 	
 	public Calculator(double leistung, double spannung, double strom, double widerstand) {
 		super();
-		this.leistung = leistung;
-		this.spannung = spannung;
-		this.strom = strom;
-		this.widerstand = widerstand;
+		this.p = leistung;
+		this.u = spannung;
+		this.i = strom;
+		this.r = widerstand;
 	}
 	
 	public double getLeistung() {
-		return leistung;
+		return p;
 	}
 	
 	public double getSpannung() {
-		return spannung;
+		return u;
 	}
 
 	public double getStrom() {
-		return strom;
+		return i;
 	}
 
 	public double getWiderstand() {
-		return widerstand;
+		return r;
 	}
 
 	@Override
 	public String toString() {
-		return "Calculator [leistung=" + leistung + 
-				", spannung=" + spannung + 
-				", strom=" + strom + 
-				", widerstand="	+ widerstand + "]";
+		return "Calculator [leistung=" + p +
+				", spannung=" + u +
+				", strom=" + i +
+				", widerstand="	+ r + "]";
 	}
 
 	public void calculate() {
 		/* Hier auf Grund der vorhanden Werte entscheiden
 		 * welche Methode unten aufgerufen werden muss.
 		 */
+
+		if(p == 0.0) {
+			if(u == 0.0) {
+				u = UAusRUndI(r, i);
+				p = pAusRundI(r, i);
+			}
+			else if(i == 0.0) {
+				p = pAusUundR(u, r);
+				i = iAusUundR(u, r);
+			}
+			else if(r == 0.0) {
+				p = pAusUundI(u, i);
+				r = RAusUUndI(u, i);
+			}
+			else {
+				p = pAusRundI(r, i);
+			}
+		}
+		if(u == 0.0) {
+			if(i == 0.0) {
+				u = UAusPUndR(p, r);
+				i = iAusPundR(p, r);
+			}
+			else if(r == 0.0) {
+				u = UAusPUndI(p, i);
+				r = RAusPUndI(p, i);
+			}
+			else {
+				u = UAusPUndR(p, r);
+			}
+		}
+		if(i == 0.0) {
+			if(r == 0.0) {
+				i = iAusPundU(p, u);
+				r = RAusUUndP(u, p);
+			}
+			else {
+				i = iAusPundU(p, u);
+			}
+		}
+		if(r==0.0) {
+			r = RAusUUndP(u, p);
+		}
 	}
 	public double pAusUundI(double u, double i) {
 		return u*i;

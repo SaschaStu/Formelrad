@@ -1,6 +1,14 @@
 # Compiled class file
 *.class
 
+#Intellij dir&files
+.idea/
+target/
+*.iml
+
+#Graph.txt ignore
+graph.txt
+
 # Log file
 *.log
 

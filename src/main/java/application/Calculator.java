@@ -47,6 +47,22 @@ public class Calculator {
 		/* Hier auf Grund der vorhanden Werte entscheiden
 		 * welche Methode unten aufgerufen werden muss.
 		 */
+		int given = 0;
+		if(p != 0.0) {
+			given++;
+		}
+		if(u != 0.0) {
+			given++;
+		}
+		if(r != 0.0) {
+			given++;
+		}
+		if(i != 0.0) {
+			given++;
+		}
+		if(given > 2) {
+			System.out.println("Warnung: Mehr als 2 Parameter angegeben!");
+		}
 
 		if(p == 0.0) {
 			if(u == 0.0) {

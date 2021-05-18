@@ -120,38 +120,47 @@ public class Calculator {
 	 */
 
 	//Alle Methoden zur Berechnung der Spannung U aus zwei bekannten Grössen
-	public double UAusRUndI(double r, double i){
+	public double UAusRUndI(double r, double i) {
+		System.out.println("Berechne U aus R und I");
 		return r*i;
 	}
 
-	public double UAusPUndI(double p, double i){
+	public double UAusPUndI(double p, double i) {
+		System.out.println("Berechne U aus P und I");
 		return p/i;
 	}
 
-	public double UAusPUndR(double p, double r){
+	public double UAusPUndR(double p, double r) {
+		System.out.println("Berechne U aus P und R");
 		return Math.sqrt(p*r);
 	}
 
 	public double iAusPundR(double p, double r) {
+		System.out.println("Berechne I aus P und R");
 		return Math.sqrt(p/r);
 	}
 	public double iAusPundU(double p, double u) {
+		System.out.println("Berechne I aus P und U");
 		return p/u;
 	}
 	public double iAusUundR(double u, double r) {
+		System.out.println("Berechne I aus U und R");
 		return u/r;
 	}
 
 	//Alle Methoden zur Berechnung des Widerstandes R aus zwei bekannten Grössen
 	public double RAusUUndP(double u, double p){
+		System.out.println("Berechne R aus U und P");
 		return Math.pow(u,2)/p;
 	}
 
 	public double RAusPUndI(double p, double i){
+		System.out.println("Berechne R aus P und I");
 		return p/Math.pow(i,2);
 	}
 
 	public double RAusUUndI(double u, double i){
+		System.out.println("Berechne R aus U und I");
 		return u/i;
 	}
 

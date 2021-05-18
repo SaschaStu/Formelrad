@@ -82,18 +82,31 @@ public class Main extends Application {
 				double tension = 0.0;
 				double current = 0.0;
 				double resistence = 0.0;
+
 				if(txLeistung.getText().isEmpty()==false) {
 					power = Double.parseDouble(txLeistung.getText());
+				} else{
+					txLeistung.setStyle("-fx-text-fill: red;");
 				}
+
 				if(txSpannung.getText().isEmpty()==false) {
 					tension = Double.parseDouble(txSpannung.getText());
+				} else {
+					txSpannung.setStyle("-fx-text-fill: red;");
 				}
+
 				if(txStrom.getText().isEmpty()==false) {
 					current = Double.parseDouble(txStrom.getText());
+				} else {
+					txStrom.setStyle("-fx-text-fill: red;");
 				}
+
 				if(txWiderstand.getText().isEmpty()==false) {
 					resistence = Double.parseDouble(txWiderstand.getText());
+				} else {
+					txWiderstand.setStyle("-fx-text-fill: red;");
 				}
+
 				Calculator myCalculator = new Calculator(
 						power, tension, current, resistence);
 				myCalculator.calculate();
